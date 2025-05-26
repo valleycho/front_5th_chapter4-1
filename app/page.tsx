@@ -50,6 +50,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <div>배포 CI 테스트</div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
