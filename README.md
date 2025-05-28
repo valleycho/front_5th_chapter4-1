@@ -38,7 +38,7 @@
 <details>
 <summary><strong>Workflow</strong></summary>
 
-- 자동화하고 싶은 전체 작업을 하나의 단위로 정의  
+- 자동화하고 싶은 전체 작업을 하나의 단위로 정의
 - .github/workflows/ 디렉토리에 .yml 파일로 저장
 
 ```yaml
@@ -152,7 +152,7 @@ on:
 <details>
 <summary><strong>Job</strong></summary>
 
-- 하나의 독립된 실행 단위  
+- 하나의 독립된 실행 단위
 - 병렬 혹은 순차적으로 실행 가능
 
 ✅ **필수 필드**
@@ -765,19 +765,15 @@ Speed Index: 페이지가 화면에 콘텐츠를 얼마나 빠르고 부드럽�
 **Cloud Front(CDN) 렌더링 시간**  
 <img width="500" alt="Cloud Front(CDN)" src="https://github.com/user-attachments/assets/194bca6f-d295-4764-95ef-343b56ef22e7" />
 
-
 **전체 렌더링 스크린샷**
-<p style="display: flex; gap: 10px;">
-  <figure style="text-align: center;">
-    <img src="https://github.com/user-attachments/assets/b52d8579-5e9c-40c9-9418-c4c71c1cdd5d" alt="스크린샷2" width="300" />
-    <figcaption>[S3(정적 호스팅]</figcaption>
-  </figure>
 
-  <figure style="text-align: center;">
-    <img src="https://github.com/user-attachments/assets/a00bd5a0-0289-487e-80a7-0f8724ba276a" alt="스크린샷1" width="300" />
-    <figcaption>[Cloud Front(CDN)]</figcaption>
-  </figure>
-</p>
+**S3(정적 호스팅)**  
+<img src="https://github.com/user-attachments/assets/b52d8579-5e9c-40c9-9418-c4c71c1cdd5d" alt="스크린샷2" width="500" />
+
+<br>
+
+**Cloud Front(CDN)**  
+<img src="https://github.com/user-attachments/assets/a00bd5a0-0289-487e-80a7-0f8724ba276a" alt="스크린샷1" width="500" />
 
 **전체 렌더링 소요 시간**
 | 구분 | S3 | CloudFront |
