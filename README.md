@@ -38,8 +38,8 @@
 <details>
 <summary><strong>Workflow</strong></summary>
 
-자동화하고 싶은 전체 작업을 하나의 단위로 정의  
-.github/workflows/ 디렉토리에 .yml 파일로 저장
+- 자동화하고 싶은 전체 작업을 하나의 단위로 정의  
+- .github/workflows/ 디렉토리에 .yml 파일로 저장
 
 ```yaml
 /** deployment.yaml **/
@@ -64,7 +64,8 @@ jobs:
 <details>
 <summary><strong>Event</strong></summary>
 
-Workflow를 언제 실행할지 정의  
+- Workflow를 언제 실행할지 정의
+
 📂 1. 코드 관련 이벤트
 | 이벤트 이름 | 설명 |
 | --- | --- |
@@ -151,10 +152,8 @@ on:
 <details>
 <summary><strong>Job</strong></summary>
 
-하나의 독립된 실행 단위  
- 병렬 혹은 순차적으로 실행 가능
-
-**구성요소**
+- 하나의 독립된 실행 단위  
+- 병렬 혹은 순차적으로 실행 가능
 
 ✅ **필수 필드**
 
@@ -190,7 +189,8 @@ jobs:
 
 <details>
 <summary><strong>Runner</strong></summary>
-GitHub Actions에서 정의한 job들을 실제로 실행해주는 서버 또는 환경
+ - GitHub Actions에서 정의한 job들을 실제로 실행해주는 서버 또는 환경
+<br>
 
 **Runner의 종류**  
 **1. 호스티드 러너 (GitHub-hosted runners)**
@@ -206,6 +206,8 @@ jobs:
 
 🟢 장점: 별도 관리 불필요, 즉시 사용 가능  
 🔴 단점: 커스터마이징 불가, 실행 시간 제한 있음
+
+<br>
 
 **2. 셀프 호스티드 러너 (Self-hosted runners)**  
 직접 자신의 서버나 VM에 GitHub Runner를 설치해서 사용
@@ -229,7 +231,7 @@ jobs:
 
 <details>
 <summary><strong>Step</strong></summary>
-Job 안에서 실제로 명령어를 실행하는 단계
+- Job 안에서 실제로 명령어를 실행하는 단계
   
 🧩  **Step의 구성 요소**
 | 유형 | 설명 | 예시 |
@@ -253,7 +255,7 @@ jobs:
 
 <details>
 <summary><strong>Action</strong></summary>
-Action은 GitHub Actions 워크플로우에서 재사용 가능한 기능 블록(코드 체크아웃, 테스트, 배포 등)을 패키징한 작은 프로그램)   
+- Action은 GitHub Actions 워크플로우에서 재사용 가능한 기능 블록(코드 체크아웃, 테스트, 배포 등)을 패키징한 작은 프로그램)   
   
 ```yaml
 // checkout@v3는 GitHub 저장소의 코드를 받아오는 액션
@@ -285,6 +287,8 @@ runs:
 
 </details>
 
+<br><br>
+
 **📓 1-2. CI/CD 개념 및 도구**
 
 **CI (Continuous Integration) - 지속적 통합**
@@ -292,6 +296,8 @@ runs:
 - 개발자들이 자주(하루에도 여러 번) 코드를 **공용 저장소**에 병합
 - 병합 시 자동으로 **빌드와 테스트**가 실행되어, 코드 품질을 유지
 - 문제를 조기에 발견할 수 있어 개발 효율성이 높아짐
+
+<br>
 
 **CD (Continuous Delivery / Deployment)**
 
@@ -319,11 +325,11 @@ Continuous Deployment (지속적 배포)
 | **Spinnaker**           | Netflix에서 개발한 배포 전용 도구             | 복잡한 멀티 클라우드 배포에 적합                     |
 | **Tekton**              | Kubernetes 기반 CI/CD 프레임워크              | 클라우드 네이티브에 적합                             |
 
+<br><br>
+
 ### 📚 2. **S3와 스토리지**
 
-**📓 2-1. 스토리지(Storage)란?**
-
-**스토리지**는 데이터를 저장하는 장치를 의미
+**📓 2-1. 스토리지(Storage)란?** **스토리지**는 데이터를 저장하는 장치를 의미
 
 🔹 종류
 
@@ -341,9 +347,9 @@ Continuous Deployment (지속적 배포)
 | **파일 스토리지**     | 파일 단위 접근 (디렉터리 구조)  | 파일 공유, 문서 저장    |
 | **오브젝트 스토리지** | 객체 단위 저장, 메타데이터 포함 | 이미지, 백업, 로그      |
 
-**📓 2-2. Amazon S3(Amazon Simple Storage Service)란?**
+<br>
 
-**Amazon S3**는 AWS에서 제공하는 **오브젝트 스토리지 서비스**
+**📓 2-2. Amazon S3(Amazon Simple Storage Service)란?** **Amazon S3**는 AWS에서 제공하는 **오브젝트 스토리지 서비스**
 
 🔹 주요 특징
 
@@ -355,6 +361,8 @@ Continuous Deployment (지속적 배포)
 | **가용성**            | 고가용성을 위한 여러 지역 복제 기능         |
 | **보안**              | IAM 정책, 버킷 정책, 암호화 지원            |
 | **비용 효율**         | 사용한 만큼만 과금 (Pay-as-you-go)          |
+
+<br><br>
 
 ### 📚 3. **CDN와 CloudFront**
 
@@ -381,6 +389,8 @@ Continuous Deployment (지속적 배포)
 | **주요 기능** | 캐싱, 압축, HTTPS, 보안, 분석 등 |
 | **사용 예시** | 웹사이트, 앱, API, 영상 스트리밍 등 |
 | **대표 서비스** | CloudFront, Cloudflare, Akamai, Fastly 등 |
+
+<br>
 
 **📓 3-2. Cloud Front란?**
 AWS에서 제공하는 글로벌 CDN 서비스로, 웹 콘텐츠(HTML, CSS, JS, 이미지, 동영상, API 응답 등)를 지리적으로 가까운 엣지 서버에서 캐시하여 빠르게 제공하고,
@@ -422,6 +432,8 @@ AWS에서 제공하는 글로벌 CDN 서비스로, 웹 콘텐츠(HTML, CSS, JS, 
 8. Lambda@Edge
    - 엣지 위치에서 Lambda 함수를 실행해 동적으로 응답 수정 가능(A/B 테스트, 동적 리디렉션, 사용자 맞춤 응답)
 
+<br><br>
+
 ### 📚 4. **캐시 무효화(Cache Invalidation)**
 
 ✅ **4-1. 캐시 무효화(Cache Invalidation)란?**  
@@ -460,6 +472,8 @@ CloudFront는 오리진(S3, EC2 등)에서 받아온 콘텐츠를 엣지 서버�
 | `"/index.html"` | 특정 파일만 무효화 |
 | `"/static/*"` | 특정 디렉터리 하위 전체 무효화 |
 
+<br><br>
+
 ### 📚 5. **Repository secret과 환경변수**
 
 Repository Secrets는 비밀번호, API 키, 토큰 등 민감한 값을 안전하게 저장하고 사용하는 기능
@@ -488,6 +502,8 @@ env:
 | 접근 방법 | `${{ secrets.NAME }}` | `$NAME` 또는 `${{ env.NAME }}` |
 | 보안 | 암호화 + 로그 마스킹 | 로그에 노출될 수 있음 |
 | 설정 위치 | GitHub 웹 UI | YAML 내부 또는 `.env` |
+
+<br><br>
 
 ### 📚 6. **CDN과 성능최적화**
 
