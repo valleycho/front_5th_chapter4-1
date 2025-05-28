@@ -5,6 +5,8 @@
 - CloudFront 웹사이트 URL
   - https://d2g4ghv4jkjmqd.cloudfront.net/
 
+<br><br>
+
 ## 🛠️ 프론트엔드 배포 워크플로우
 
 ### 📌 개요
@@ -21,6 +23,8 @@
    - 빌드된 파일을 S3의 동기화
    - CloudFront의 캐시 무효화해서 업데이트
 3. S3(정적 호스팅) 주소와 CloudFront 주소에 각각 접속하면, CDN이 적용되지 않은 버전과 적용된 버전의 홈페이지를 확인 가능
+
+<br><br>
 
 ## 🧠 주요 개념
 
