@@ -758,12 +758,12 @@ Speed Index: 페이지가 화면에 콘텐츠를 얼마나 빠르고 부드럽�
 **📈 6-2. 렌더링 시간**
 
 **S3(정적 호스팅) 렌더링 시간**  
-<img width="590" alt="S3(정적 호스팅)" src="https://github.com/user-attachments/assets/14e5c2b8-f09a-43ea-bba5-7afe5566f312" />
+<img width="500" alt="S3(정적 호스팅)" src="https://github.com/user-attachments/assets/14e5c2b8-f09a-43ea-bba5-7afe5566f312" />
 
 <br>
 
 **Cloud Front(CDN) 렌더링 시간**  
-<img width="590" alt="Cloud Front(CDN)" src="https://github.com/user-attachments/assets/194bca6f-d295-4764-95ef-343b56ef22e7" />
+<img width="500" alt="Cloud Front(CDN)" src="https://github.com/user-attachments/assets/194bca6f-d295-4764-95ef-343b56ef22e7" />
 
 
 **전체 렌더링 스크린샷**
