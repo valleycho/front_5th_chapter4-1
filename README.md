@@ -38,7 +38,7 @@
 <details>
 <summary><strong>Workflow</strong></summary>
 
-- 자동화하고 싶은 전체 작업을 하나의 단위로 정의
+- 자동화하고 싶은 전체 작업을 하나의 단위로 정의  
 - .github/workflows/ 디렉토리에 .yml 파일로 저장
 
 ```yaml
@@ -152,7 +152,7 @@ on:
 <details>
 <summary><strong>Job</strong></summary>
 
-- 하나의 독립된 실행 단위
+- 하나의 독립된 실행 단위  
 - 병렬 혹은 순차적으로 실행 가능
 
 ✅ **필수 필드**
@@ -605,7 +605,7 @@ Lighthouse는 아래 6가지 핵심 지표를 기반으로 Performance 점수를
 
 </details>
 
-FCP(First Contentful Paint): 사용자가 페이지를 로드했을 때, 브라우저가 처음으로 화면에 텍스트나 이미지 등 “콘텐츠”를 그리는 시점까지 걸리는 시간
+**FCP(First Contentful Paint): 사용자가 페이지를 로드했을 때, 브라우저가 처음으로 화면에 텍스트나 이미지 등 “콘텐츠”를 그리는 시점까지 걸리는 시간**
 
 🎯 FCP가 측정하는 콘텐츠
 | 포함됨 | 제외됨 |
@@ -634,7 +634,7 @@ FCP(First Contentful Paint): 사용자가 페이지를 로드했을 때, 브라�
 
 <br>
 
-LCP(Largest Contentful Paint): 사용자가 페이지를 요청한 시점부터, 가장 크고 의미 있는 콘텐츠(예: 히어로 이미지, 큰 텍스트 블록 등)가 화면에 표시되기까지 걸리는 시간을 의미
+**LCP(Largest Contentful Paint): 사용자가 페이지를 요청한 시점부터, 가장 크고 의미 있는 콘텐츠(예: 히어로 이미지, 큰 텍스트 블록 등)가 화면에 표시되기까지 걸리는 시간을 의미**
 
 📦 LCP 측정 기준
 | 요소 | 예시 |
@@ -665,7 +665,7 @@ LCP(Largest Contentful Paint): 사용자가 페이지를 요청한 시점부터,
 
 <br>
 
-TBT(Total Blocking Time): 페이지가 로딩될 때, 브라우저 메인 스레드가 긴 작업 때문에 사용자 입력을 무시한 시간의 총합을 측정
+**TBT(Total Blocking Time): 페이지가 로딩될 때, 브라우저 메인 스레드가 긴 작업 때문에 사용자 입력을 무시한 시간의 총합을 측정**
 
 ⏱️ TBT 계산 방법  
 1.**브라우저의 메인 스레드가 50ms 이상 실행되는 "long task"**를 찾습니다.  
@@ -701,7 +701,7 @@ TBT(Total Blocking Time): 페이지가 로딩될 때, 브라우저 메인 스레
 
 <br>
 
-CLS (Cumulative Layout Shift): CLS는 페이지가 로딩되는 동안
+**CLS (Cumulative Layout Shift): CLS는 페이지가 로딩되는 동안**
 요소들이 예고 없이 움직이는(shift) 현상이 얼마나 자주, 얼마나 많이 발생하는지를 수치로 나타낸 지표
 
 🧮 CLS 점수 계산 방식
@@ -731,7 +731,7 @@ CLS (Cumulative Layout Shift): CLS는 페이지가 로딩되는 동안
 
 <br>
 
-Speed Index: 페이지가 화면에 콘텐츠를 얼마나 빠르고 부드럽게 렌더링하는지를 수치로 나타낸 지표
+**Speed Index: 페이지가 화면에 콘텐츠를 얼마나 빠르고 부드럽게 렌더링하는지를 수치로 나타낸 지표**
 
 🧮 Speed Index 점수 계산 방식  
  Lighthouse가 페이지 렌더링 과정을 녹화하고, 각 시점마다 **화면에 얼마나 콘텐츠가 채워졌는지(시각적 진행률)**를 분석해서 계산
@@ -758,22 +758,26 @@ Speed Index: 페이지가 화면에 콘텐츠를 얼마나 빠르고 부드럽�
 **📈 6-2. 렌더링 시간**
 
 **S3(정적 호스팅) 렌더링 시간**  
-<img width="500" alt="S3(정적 호스팅)" src="https://github.com/user-attachments/assets/14e5c2b8-f09a-43ea-bba5-7afe5566f312" />
+<img width="590" alt="S3(정적 호스팅)" src="https://github.com/user-attachments/assets/14e5c2b8-f09a-43ea-bba5-7afe5566f312" />
 
 <br>
 
 **Cloud Front(CDN) 렌더링 시간**  
-<img width="500" alt="Cloud Front(CDN)" src="https://github.com/user-attachments/assets/194bca6f-d295-4764-95ef-343b56ef22e7" />
+<img width="590" alt="Cloud Front(CDN)" src="https://github.com/user-attachments/assets/194bca6f-d295-4764-95ef-343b56ef22e7" />
+
 
 **전체 렌더링 스크린샷**
+<p style="display: flex; gap: 10px;">
+  <figure style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/b52d8579-5e9c-40c9-9418-c4c71c1cdd5d" alt="스크린샷2" width="300" />
+    <figcaption>[S3(정적 호스팅]</figcaption>
+  </figure>
 
-**S3(정적 호스팅)**  
-<img src="https://github.com/user-attachments/assets/b52d8579-5e9c-40c9-9418-c4c71c1cdd5d" alt="스크린샷2" width="500" />
-
-<br>
-
-**Cloud Front(CDN)**  
-<img src="https://github.com/user-attachments/assets/a00bd5a0-0289-487e-80a7-0f8724ba276a" alt="스크린샷1" width="500" />
+  <figure style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/a00bd5a0-0289-487e-80a7-0f8724ba276a" alt="스크린샷1" width="300" />
+    <figcaption>[Cloud Front(CDN)]</figcaption>
+  </figure>
+</p>
 
 **전체 렌더링 소요 시간**
 | 구분 | S3 | CloudFront |
@@ -786,3 +790,98 @@ Speed Index: 페이지가 화면에 콘텐츠를 얼마나 빠르고 부드럽�
 
 **📊 6-3. Cloud Front(CDN)과 S3(정적 호스팅) 비교 분석**
 <img width="640" alt="스크린샷 2025-05-28 오후 12 15 37" src="https://github.com/user-attachments/assets/e266a7ea-df0e-4608-bce9-de359d27d1cc" />
+
+<br><br>
+
+## ✨ 번외 테스트
+예전부터 이미지 최적화와 CSR/SSR 간의 성능 차이에 대해 궁금했었는데, 이번 과제를 통해 직접 테스트해보았습니다.
+
+### 🎉 CloudFront(CDN)(이미지 최적화 미사용) vs Vercel(이미지 최적화 사용)
+📌 **CloudFront(CDN)**
+- **CloudFront 이미지 네트워크 상세화면**
+<img width="721" alt="cloudFront_image_노압축" src="https://github.com/user-attachments/assets/3dc34b3e-eb3c-41fd-9bca-f21df89022b5" />   
+<br>
+
+이미지 최적화가 안되서 content-type이 image/jpeg를 그대로 반환하고 있습니다.
+
+<br>
+
+- **CloudFront 이미지 네트워크**
+<img width="726" alt="cloudFront_image_network" src="https://github.com/user-attachments/assets/52eba1c7-881f-46c9-afdd-b5c2be3602cc" />
+<br>
+
+이미지를 받아오는 데 다소 시간이 걸리며, 최종적으로 완료되는 데 약 7.10초가 소요되는 것을 확인할 수 있습니다.
+
+<br>
+
+- **CloudFront lighthouse**
+<img width="704" alt="cloudFront_lighthouse" src="https://github.com/user-attachments/assets/c947ef94-ab6d-42e4-914c-4096c22d42a5" />
+<br>
+
+<br>
+
+📌 **Vercel**
+- **Vercel 이미지 네트워크 상세화면**
+<img width="717" alt="vercel_csr_압축" src="https://github.com/user-attachments/assets/2f996c37-fd0c-4819-8d10-6eb6caeeaf6f" />
+<br>
+
+이미지 최적화가 되어 content-type이 image/webp로 변환된 것을 확인할 수 있습니다.
+
+<br>
+
+- **Vercel 이미지 네트워크**
+<img width="721" alt="vercel_csr_image_network" src="https://github.com/user-attachments/assets/9a8cc550-e237-4b94-a21a-7d34a75eac3d" />
+<br>
+
+이미지를 받아오는 데 캐싱으로 인해 소요시간이 적고, 최종적으로 완료되는 데 약 6.70초가 소요되는 것을 확인할 수 있습니다.   
+
+<br>
+
+- **Vercel lighthouse**
+<img width="707" alt="vercel_csr_lighthouse" src="https://github.com/user-attachments/assets/bc7205c9-441f-473c-88a7-7b52aa32e1ad" />
+<br>
+
+<br><br>
+
+
+### 🎉 Vercel(CSR) vs Vercel(SSR)
+📌 **Vercel(CSR)**
+- **Vercel(CSR) 이미지 네트워크**
+<img width="721" alt="vercel_csr_image_network" src="https://github.com/user-attachments/assets/102f2ab6-8c2e-4c21-9b16-49b71ef9e407" />
+<br>
+
+- **Vercel(CSR) lighthouse**
+<img width="707" alt="vercel_csr_lighthouse" src="https://github.com/user-attachments/assets/bc7205c9-441f-473c-88a7-7b52aa32e1ad" />
+<br>
+
+<br>
+
+📌 **Vercel(SSR)**
+- **Vercel(SSR) 이미지 네트워크**
+<img width="722" alt="vercel_ssr_image_network" src="https://github.com/user-attachments/assets/03dcfcfb-6988-48a7-a999-e3bde045f3f8" />
+<br>
+
+이미지를 받아오는 데 캐싱으로 인해 소요시간이 적고, 최종적으로 완료되는 데 약 6.35초가 소요되는 것을 확인할 수 있습니다.   
+
+<br>
+
+- **Vercel(SSR) lighthouse**
+<img width="708" alt="vercel_ssr_lighthouse" src="https://github.com/user-attachments/assets/8e66e89f-dbce-454f-8e1c-7bebfe0d2cd7" />
+<br>
+
+<br>
+
+### 🎉 최종 요약   
+| 항목             | CloudFront | Vercel(CSR) | Vercel(SSR) |
+|------------------|------------|-------------|-------------|
+| Performance      | 🟡 78점     | 🟢 92점      | 🟢 100점     |
+| Accessibility    | 🟢 100점    | 🟢 100점     | 🟢 100점     |
+| Best Practices   | 🟢 93점     | 🟢 96점      | 🟢 96점      |
+| SEO              | 🟢 100점    | 🟡 63점      | 🟡 63점      |
+| FCP              | 🟢 ⏱️0.3s   | 🟢 ⏱️0.2s    | 🟢 ⏱️0.2s   |
+| LCP              | 🔴 ⏱️3.9s   | 🟡 ⏱️1.8s    | 🟢 ⏱️0.5s   |
+| TBT              | 🟢 ⏱️10ms   | 🟢 ⏱️20ms    | 🟢 ⏱️10ms   |
+| CLS              | 🟢 ⏱️0      | 🟢 ⏱️0       | 🟢 ⏱️0      |
+| Speed Index      | 🟡 ⏱️1.4s   | 🟢 ⏱️1.2s    | 🟢 ⏱️0.2s   |
+| 최종 완료시간       | ⏱️ 7.10초   | ⏱️ 6.70초    | ⏱️ 6.35초    |
+
